@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛡️ ONYX Seguridad — Sitio Web Oficial
 
-## Getting Started
+<p align="center">
+  <strong>ONYX Seguridad Privada y Estratégica S.A. de C.V.</strong><br/>
+  <em>Registro SSP/SUBCOP/DGSP/033-25/530 · Puebla, México</em>
+</p>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📋 Descripción
+
+Sitio web oficial de **ONYX Seguridad Privada y Estratégica**, diseñado como una plataforma de visibilidad digital y generación de contactos. Desarrollado con tecnologías de última generación, ofrece una experiencia premium con un diseño **negro y dorado** que refleja la identidad corporativa de la empresa.
+
+El sitio presenta todos los servicios de seguridad de ONYX, su tecnología, capacitación, certificaciones y datos de contacto, con un flujo de usuario optimizado para la conversión vía **WhatsApp**.
+
+## 🚀 Stack Tecnológico
+
+| Tecnología | Versión | Propósito |
+|---|---|---|
+| **Next.js** | 16 | Framework React, SSR/SSG, SEO-friendly |
+| **React** | 19 | Componentes modernos con hooks |
+| **TypeScript** | 5+ | Tipado estático, robustez y mantenimiento |
+| **Tailwind CSS** | 4 | Diseño responsive y limpio |
+| **Framer Motion** | — | Animaciones fluidas scroll-triggered |
+| **react-icons** | — | Biblioteca de iconos (Font Awesome, Game Icons) |
+
+## 🏗️ Arquitectura
+
+Sitio **single-page scroll** con 7 secciones principales:
+
+```
+📄 page.tsx
+ ├── 🧭 Navbar (sticky, scroll-aware, hamburger móvil)
+ ├── 🏠 Hero (banner, stats, CTAs)
+ ├── 📋 Nuestros Servicios (8 tarjetas interactivas)
+ ├── 👤 Vigilante de Seguridad (uniforme + equipamiento)
+ ├── 🎓 Capacitación y Turnos (4 capacidades + 4 turnos)
+ ├── ✅ Reclutamiento y Selección (ISO 9001, CUIP, requisitos)
+ ├── 📘 Manual Operativo y Protocolos (3 pilares + supervisiones)
+ ├── 💡 Tecnología + Experiencias (6 techs + 9 clientes + sectores)
+ ├── 📞 Contacto (formulario → WhatsApp + datos completos)
+ └── 💬 WhatsApp Float (botón flotante permanente)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Estructura del Proyecto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+onyxseguridad/
+├── app/
+│   ├── components/
+│   │   ├── Navbar.tsx
+│   │   ├── WhatsAppFloat.tsx
+│   │   ├── SectionTitle.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── ServiciosSection.tsx
+│   │   ├── VigilanteSection.tsx
+│   │   ├── CapacitacionSection.tsx
+│   │   ├── ReclutamientoSection.tsx
+│   │   ├── ProtocolosSection.tsx
+│   │   ├── TecnologiaSection.tsx
+│   │   └── ContactoSection.tsx
+│   ├── globals.css          # Design system (paleta negro-dorado)
+│   ├── layout.tsx           # SEO metadata + fuente Outfit
+│   └── page.tsx             # Composición de todas las secciones
+├── public/
+│   └── images/
+│       ├── hero-banner.png  # Centro de monitoreo
+│       ├── vigilante.png    # Guardia con uniforme
+│       └── tecnologia.png   # Dashboard de geolocalización
+├── next.config.ts
+├── tailwind.config.ts
+├── tsconfig.json
+└── package.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚡ Instalación y Desarrollo
 
-## Learn More
+```bash
+# Clonar el repositorio
+git clone https://github.com/OnyxSeguridad/OnyxSeguridadFrontend.git
+cd OnyxSeguridadFrontend
 
-To learn more about Next.js, take a look at the following resources:
+# Instalar dependencias
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Iniciar servidor de desarrollo
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Build de producción
+npm run build
 
-## Deploy on Vercel
+# Iniciar servidor de producción
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+El servidor de desarrollo ejecuta en `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Diseño
+
+- **Paleta**: Negro (`#0a0a0a`) y Dorado (`#c8a84e`) — transmite autoridad, confianza y profesionalismo
+- **Tipografía**: [Outfit](https://fonts.google.com/specimen/Outfit) (Google Fonts)
+- **Animaciones**: Entrada por scroll con Framer Motion
+- **Efectos**: Glassmorphism, gradientes dorados, hover interactivos
+- **Responsive**: Mobile-first, optimizado para todos los dispositivos
+
+## 📱 Flujo de Usuario
+
+```
+Usuario llega → Hero (banner + CTA WhatsApp)
+    ↓
+Navega por menú (scroll suave entre secciones)
+    ↓
+Cada sección tiene botones "Más información por WhatsApp"
+    ↓
+Formulario de contacto → envía directo a WhatsApp
+    ↓
+Botón flotante WhatsApp siempre visible
+```
+
+## 🔍 SEO
+
+- Meta tags optimizados (título, descripción, keywords)
+- OpenGraph tags para redes sociales
+- Estructura semántica HTML5
+- `lang="es"` configurado
+- Prerendered como contenido estático
+- Optimización Core Web Vitals
+
+## 📞 Contacto ONYX
+
+- **Oficina**: 222 503 3916
+- **WhatsApp**: 221 147 6154
+- **Correo**: contacto@onyxseguridad.com / enlace@onyxseguridad.com
+- **Web**: [onyxseguridad.com](https://www.onyxseguridad.com)
+
+## 📄 Licencia
+
+Propiedad de **ONYX Seguridad Privada y Estratégica S.A. de C.V.** Todos los derechos reservados.
+
+---
+
+<p align="center">
+  Desarrollado con ❤️ por <strong>Juan Angel Colorado Pacheco</strong>
+</p>
