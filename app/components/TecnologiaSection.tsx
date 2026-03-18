@@ -45,16 +45,15 @@ const tecnologias = [
   },
 ];
 
-const clientes = [
-  "FEMSA",
-  "Fratta",
-  "Loxitec",
-  "Brecasa",
-  "Lomas de Angelópolis",
-  "Cinuk",
-  "Indasa",
-  "Phimsa",
-  "Tresguerras",
+const clientesConLogo = [
+  { name: "FEMSA", src: "/images/clients/FEMSA_Logo.svg", darkBg: false },
+  { name: "Fratta", src: "/images/clients/Fratta.png", darkBg: false },
+  { name: "Loxitec", src: "/images/clients/loxitec.gif", darkBg: false },
+  { name: "Brecasa", src: "/images/clients/brecasa.png", darkBg: true },
+  { name: "Lomas de Angelópolis", src: "/images/clients/lomasdeangelopolis.png", darkBg: false },
+  { name: "Cinuk", src: "/images/clients/cinuk.png.webp", darkBg: false },
+  { name: "Indasa", src: "/images/clients/indasa.jpg", darkBg: false },
+  { name: "Tresguerras", src: "/images/clients/tresguerras.webp", darkBg: false },
 ];
 
 const sectores = [
@@ -144,20 +143,38 @@ export default function TecnologiaSection() {
           <div className="mt-4 mx-auto h-1 w-16 bg-gradient-to-r from-onyx-gold to-onyx-gold-light rounded-full" />
         </motion.div>
 
-        {/* Client logos as text badges */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {clientes.map((cliente, i) => (
+        {/* Client logos */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 mb-6">
+          {clientesConLogo.map((cliente, i) => (
             <motion.div
-              key={cliente}
+              key={cliente.name}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
-              className="px-6 py-3 bg-onyx-card border border-onyx-border rounded-xl text-onyx-text font-medium hover:border-onyx-gold/40 hover:text-onyx-gold transition-all duration-200"
+              className={`group rounded-2xl p-5 flex items-center justify-center h-24 border border-onyx-border hover:border-onyx-gold/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-onyx-gold/10 ${cliente.darkBg ? "bg-onyx-card" : "bg-white"}`}
             >
-              {cliente}
+              <Image
+                src={cliente.src}
+                alt={`Logo de ${cliente.name}`}
+                width={140}
+                height={60}
+                className="object-contain max-h-14 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-80 group-hover:opacity-100"
+              />
             </motion.div>
           ))}
+          {/* Phimsa — solo texto */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: clientesConLogo.length * 0.06 }}
+            className="bg-onyx-card rounded-2xl p-5 flex items-center justify-center h-24 border border-onyx-border hover:border-onyx-gold/40 transition-all duration-300 hover:-translate-y-1"
+          >
+            <span className="text-onyx-text-muted font-semibold text-sm text-center leading-tight hover:text-onyx-gold transition-colors">
+              Comercializadora<br />Phimsa
+            </span>
+          </motion.div>
         </div>
 
         {/* Sectors */}
