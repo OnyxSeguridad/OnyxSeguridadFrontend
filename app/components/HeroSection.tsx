@@ -102,7 +102,6 @@ export default function HeroSection() {
           >
             {[
               { value: "24/7", label: "Monitoreo Permanente" },
-              { value: "ISO", label: "Certificación 9001-2008" },
               { value: "GPS", label: "Geolocalización en vivo" },
               { value: "SSP", label: "Registro Oficial" },
             ].map((stat, i) => (

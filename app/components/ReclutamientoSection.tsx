@@ -26,9 +26,9 @@ export default function ReclutamientoSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          badge="Estándares ISO"
+          badge="Calidad Excepcional"
           title="Reclutamiento y Selección"
-          subtitle="Nuestra área de selección está conformada por profesionales especializados en sistemas de gestión de calidad, con los procesos más exhaustivos bajo estándares ISO 9001-2008."
+          subtitle="Nuestra área de selección está conformada por profesionales especializados en sistemas de gestión de calidad, con los procesos más exhaustivos."
         />
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -40,21 +40,6 @@ export default function ReclutamientoSection() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="glass rounded-2xl p-6 flex items-start gap-4">
-              <div className="w-14 h-14 rounded-xl bg-onyx-gold/15 flex items-center justify-center flex-shrink-0">
-                <FaCertificate className="text-onyx-gold text-2xl" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-onyx-gold mb-1">
-                  ISO 9001-2008
-                </h3>
-                <p className="text-sm text-onyx-text-muted leading-relaxed">
-                  Procesos exhaustivos de reclutamiento y selección bajo los
-                  más altos estándares internacionales de gestión de calidad.
-                </p>
-              </div>
-            </div>
-
             <div className="glass rounded-2xl p-6 flex items-start gap-4">
               <div className="w-14 h-14 rounded-xl bg-onyx-gold/15 flex items-center justify-center flex-shrink-0">
                 <FaIdBadge className="text-onyx-gold text-2xl" />

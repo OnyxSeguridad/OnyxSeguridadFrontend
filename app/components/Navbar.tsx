@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -46,9 +47,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-onyx-gold to-onyx-gold-dark flex items-center justify-center font-bold text-onyx-black text-lg transition-transform group-hover:scale-110">
-              O
-            </div>
+            <Image 
+              src="/images/LogoOnyx.svg" 
+              alt="Logo ONYX Seguridad" 
+              width={60} 
+              height={60} 
+              className="object-contain transition-transform group-hover:scale-105" 
+            />
             <div className="flex flex-col">
               <span className="text-onyx-gold font-bold text-lg leading-tight tracking-wide">
                 ONYX

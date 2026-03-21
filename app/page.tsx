@@ -8,6 +8,8 @@ import ReclutamientoSection from "./components/ReclutamientoSection";
 import ProtocolosSection from "./components/ProtocolosSection";
 import TecnologiaSection from "./components/TecnologiaSection";
 import ContactoSection from "./components/ContactoSection";
+import AltoImpactoSection from "./components/AltoImpactoSection";
+import RepresentantesSection from "./components/RepresentantesSection";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
         <div className="section-divider" />
         <VigilanteSection />
         <div className="section-divider" />
+        <AltoImpactoSection />
+        <div className="section-divider" />
         <CapacitacionSection />
         <div className="section-divider" />
         <ReclutamientoSection />
@@ -27,6 +31,8 @@ export default function Home() {
         <ProtocolosSection />
         <div className="section-divider" />
         <TecnologiaSection />
+        <div className="section-divider" />
+        <RepresentantesSection />
         <div className="section-divider" />
         <ContactoSection />
       </main>

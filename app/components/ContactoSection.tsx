@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   FaWhatsapp,
@@ -121,70 +122,104 @@ export default function ContactoSection() {
             </form>
           </motion.div>
 
-          {/* Contact info */}
+          {/* Contact info cards */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-max"
           >
-            {/* Phone card */}
+            {/* Phone Cards */}
             <a
               href="tel:+522225033916"
-              className="flex items-center gap-4 bg-onyx-card border border-onyx-border rounded-2xl p-6 hover:border-onyx-gold/30 transition-colors group"
+              className="flex flex-col items-center text-center gap-3 bg-onyx-card border border-onyx-border rounded-2xl p-5 hover:border-onyx-gold/40 hover:-translate-y-1 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-onyx-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-onyx-gold/20 transition-colors">
-                <FaPhone className="text-onyx-gold text-xl" />
+              <div className="w-12 h-12 rounded-full bg-onyx-gold/10 flex items-center justify-center group-hover:bg-onyx-gold/20 transition-colors">
+                <FaPhone className="text-onyx-gold text-lg" />
               </div>
               <div>
-                <h3 className="font-semibold text-onyx-text">Oficina ONYX</h3>
-                <p className="text-onyx-gold font-medium">222 503 3916</p>
+                <h3 className="text-sm text-onyx-text-muted mb-1">Oficina Central</h3>
+                <p className="text-onyx-gold font-bold text-lg">222 503 3916</p>
               </div>
             </a>
 
             <a
+              href="tel:+522220000000"
+              className="flex flex-col items-center text-center gap-3 bg-onyx-card border border-onyx-border rounded-2xl p-5 hover:border-onyx-gold/40 hover:-translate-y-1 transition-all duration-300 group"
+            >
+              <div className="w-12 h-12 rounded-full bg-onyx-gold/10 flex items-center justify-center group-hover:bg-onyx-gold/20 transition-colors">
+                <FaPhone className="text-onyx-gold text-lg" />
+              </div>
+              <div>
+                <h3 className="text-sm text-onyx-text-muted mb-1">Oficina 2 (Ejemplo)</h3>
+                <p className="text-onyx-gold font-bold text-lg">222 XXX XXXX</p>
+              </div>
+            </a>
+
+            {/* WhatsApp Cards */}
+            <a
               href="https://wa.me/522211476154"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-onyx-card border border-onyx-border rounded-2xl p-6 hover:border-onyx-whatsapp/30 transition-colors group"
+              className="flex flex-col items-center text-center gap-3 bg-onyx-card border border-onyx-border rounded-2xl p-5 hover:border-onyx-whatsapp/40 hover:-translate-y-1 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-onyx-whatsapp/10 flex items-center justify-center flex-shrink-0 group-hover:bg-onyx-whatsapp/20 transition-colors">
-                <FaWhatsapp className="text-onyx-whatsapp text-2xl" />
+              <div className="w-12 h-12 rounded-full bg-onyx-whatsapp/10 flex items-center justify-center group-hover:bg-onyx-whatsapp/20 transition-colors">
+                <FaWhatsapp className="text-onyx-whatsapp text-xl" />
               </div>
               <div>
-                <h3 className="font-semibold text-onyx-text">WhatsApp</h3>
-                <p className="text-onyx-whatsapp font-medium">221 147 6154</p>
+                <h3 className="text-sm text-onyx-text-muted mb-1">WhatsApp Ventas</h3>
+                <p className="text-onyx-whatsapp font-bold text-lg">221 147 6154</p>
+              </div>
+            </a>
+
+            <a
+              href="https://wa.me/522210000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center text-center gap-3 bg-onyx-card border border-onyx-border rounded-2xl p-5 hover:border-onyx-whatsapp/40 hover:-translate-y-1 transition-all duration-300 group"
+            >
+              <div className="w-12 h-12 rounded-full bg-onyx-whatsapp/10 flex items-center justify-center group-hover:bg-onyx-whatsapp/20 transition-colors">
+                <FaWhatsapp className="text-onyx-whatsapp text-xl" />
+              </div>
+              <div>
+                <h3 className="text-sm text-onyx-text-muted mb-1">WhatsApp Enlace</h3>
+                <p className="text-onyx-whatsapp font-bold text-lg">221 XXX XXXX</p>
+              </div>
+            </a>
+
+            {/* Email Cards */}
+            <a
+              href="mailto:enlace@onyxseguridad.com"
+              className="flex flex-col items-center text-center gap-2 bg-onyx-card border border-onyx-border rounded-2xl p-5 hover:border-onyx-gold/40 hover:-translate-y-1 transition-all duration-300 group"
+            >
+              <div className="w-12 h-12 rounded-full bg-onyx-gold/10 flex items-center justify-center group-hover:bg-onyx-gold/20 transition-colors">
+                <FaEnvelope className="text-onyx-gold text-lg" />
+              </div>
+              <div className="w-full">
+                <h3 className="text-sm text-onyx-text-muted mb-1">Enlace</h3>
+                <p className="text-onyx-gold font-medium text-xs break-all">enlace@onyxseguridad.com</p>
               </div>
             </a>
 
             <a
               href="mailto:contacto@onyxseguridad.com"
-              className="flex items-center gap-4 bg-onyx-card border border-onyx-border rounded-2xl p-6 hover:border-onyx-gold/30 transition-colors group"
+              className="flex flex-col items-center text-center gap-2 bg-onyx-card border border-onyx-border rounded-2xl p-5 hover:border-onyx-gold/40 hover:-translate-y-1 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-onyx-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-onyx-gold/20 transition-colors">
-                <FaEnvelope className="text-onyx-gold text-xl" />
+              <div className="w-12 h-12 rounded-full bg-onyx-gold/10 flex items-center justify-center group-hover:bg-onyx-gold/20 transition-colors">
+                <FaEnvelope className="text-onyx-gold text-lg" />
               </div>
-              <div>
-                <h3 className="font-semibold text-onyx-text">
-                  Correo Electrónico
-                </h3>
-                <p className="text-onyx-text-muted text-sm">
-                  contacto@onyxseguridad.com
-                </p>
-                <p className="text-onyx-text-muted text-sm">
-                  enlace@onyxseguridad.com
-                </p>
+              <div className="w-full">
+                <h3 className="text-sm text-onyx-text-muted mb-1">General</h3>
+                <p className="text-onyx-gold font-medium text-xs break-all">contacto@onyxseguridad.com</p>
               </div>
             </a>
 
-            <div className="flex items-center gap-4 bg-onyx-card border border-onyx-border rounded-2xl p-6">
-              <div className="w-14 h-14 rounded-xl bg-onyx-gold/10 flex items-center justify-center flex-shrink-0">
-                <FaMapMarkerAlt className="text-onyx-gold text-xl" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-onyx-text">Ubicación</h3>
-                <p className="text-onyx-text-muted text-sm">Puebla, Puebla, México</p>
+            {/* Ubicación */}
+            <div className="sm:col-span-2 flex flex-col items-center text-center gap-3 bg-onyx-card/50 border border-onyx-border/50 rounded-2xl p-4 mt-2">
+              <div className="flex items-center justify-center gap-2">
+                <FaMapMarkerAlt className="text-onyx-gold text-lg" />
+                <span className="font-medium text-onyx-text">Puebla, Puebla, México</span>
               </div>
             </div>
           </motion.div>
@@ -196,9 +231,13 @@ export default function ContactoSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-onyx-gold to-onyx-gold-dark flex items-center justify-center font-bold text-onyx-black text-sm">
-                O
-              </div>
+              <Image 
+                src="/images/LogoOnyx.svg" 
+                alt="Logo ONYX Seguridad" 
+                width={48} 
+                height={48} 
+                className="object-contain" 
+              />
               <span className="text-onyx-text-muted text-sm">
                 © {new Date().getFullYear()} ONYX Seguridad Privada y Estratégica S.A. de C.V.
               </span>
