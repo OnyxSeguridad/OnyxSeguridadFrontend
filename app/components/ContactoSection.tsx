@@ -34,7 +34,7 @@ export default function ContactoSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-onyx-text font-serif tracking-wide">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-onyx-text">
             ¿Necesita Seguridad Profesional?
           </h2>
           <p className="mt-4 text-base md:text-lg text-onyx-text-muted max-w-2xl mx-auto">

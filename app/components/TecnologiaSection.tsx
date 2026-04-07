@@ -62,7 +62,6 @@ export default function TecnologiaSection() {
     <section id="tecnologia" className="py-20 md:py-28 bg-onyx-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          badge="Innovación"
           title="Nuestra Tecnología"
           subtitle="Implementamos sistemas de última generación para garantizar la seguridad de nuestros clientes con geolocalización, drones y monitoreo en tiempo real."
         />
@@ -126,7 +125,7 @@ export default function TecnologiaSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-onyx-text mb-4 font-serif tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-bold text-onyx-text mb-4">
             Clientes que Confían en ONYX
           </h2>
         </motion.div>
