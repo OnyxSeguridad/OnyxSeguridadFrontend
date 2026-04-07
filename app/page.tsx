@@ -9,7 +9,7 @@ import ProtocolosSection from "./components/ProtocolosSection";
 import TecnologiaSection from "./components/TecnologiaSection";
 import ContactoSection from "./components/ContactoSection";
 import AltoImpactoSection from "./components/AltoImpactoSection";
-import RepresentantesSection from "./components/RepresentantesSection";
+
 
 export default function Home() {
   return (
@@ -31,8 +31,6 @@ export default function Home() {
         <ProtocolosSection />
         <div className="section-divider" />
         <TecnologiaSection />
-        <div className="section-divider" />
-        <RepresentantesSection />
         <div className="section-divider" />
         <ContactoSection />
       </main>

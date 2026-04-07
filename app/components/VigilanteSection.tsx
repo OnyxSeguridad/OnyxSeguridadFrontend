@@ -55,10 +55,10 @@ export default function VigilanteSection() {
           >
             <div className="relative rounded-2xl overflow-hidden aspect-[3/4] max-w-md mx-auto glow-gold">
               <Image
-                src="/images/vigilante.png"
-                alt="Vigilante de seguridad ONYX con uniforme homologado completo"
+                src="/images/PHOTO-2026-04-06-18-50-19 (1).jpg"
+                alt="Vigilantes de seguridad ONYX con uniforme homologado completo"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 quality={85}
               />

@@ -56,14 +56,6 @@ const clientesConLogo = [
   { name: "Tresguerras", src: "/images/clients/tresguerras.webp", darkBg: false },
 ];
 
-const sectores = [
-  "Industria",
-  "Farmacia",
-  "Colegios",
-  "Tiendas Departamentales",
-  "Dependencias de Gobierno",
-  "Fraccionamientos",
-];
 
 export default function TecnologiaSection() {
   return (
@@ -144,7 +136,7 @@ export default function TecnologiaSection() {
         </motion.div>
 
         {/* Client logos */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
           {clientesConLogo.map((cliente, i) => (
             <motion.div
               key={cliente.name}
@@ -177,17 +169,6 @@ export default function TecnologiaSection() {
           </motion.div>
         </div>
 
-        {/* Sectors */}
-        <div className="flex flex-wrap justify-center gap-3">
-          {sectores.map((sector) => (
-            <span
-              key={sector}
-              className="px-4 py-2 text-sm text-onyx-text-muted border border-onyx-border rounded-full"
-            >
-              {sector}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   );

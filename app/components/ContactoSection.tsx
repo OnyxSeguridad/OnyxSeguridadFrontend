@@ -144,19 +144,6 @@ export default function ContactoSection() {
               </div>
             </a>
 
-            <a
-              href="tel:+522220000000"
-              className="flex flex-col items-center text-center gap-3 bg-onyx-card border border-onyx-border rounded-2xl p-5 hover:border-onyx-gold/40 hover:-translate-y-1 transition-all duration-300 group"
-            >
-              <div className="w-12 h-12 rounded-full bg-onyx-gold/10 flex items-center justify-center group-hover:bg-onyx-gold/20 transition-colors">
-                <FaPhone className="text-onyx-gold text-lg" />
-              </div>
-              <div>
-                <h3 className="text-sm text-onyx-text-muted mb-1">Oficina 2 (Ejemplo)</h3>
-                <p className="text-onyx-gold font-bold text-lg">222 XXX XXXX</p>
-              </div>
-            </a>
-
             {/* WhatsApp Cards */}
             <a
               href="https://wa.me/522211476154"
@@ -170,21 +157,6 @@ export default function ContactoSection() {
               <div>
                 <h3 className="text-sm text-onyx-text-muted mb-1">WhatsApp Ventas</h3>
                 <p className="text-onyx-whatsapp font-bold text-lg">221 147 6154</p>
-              </div>
-            </a>
-
-            <a
-              href="https://wa.me/522210000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center text-center gap-3 bg-onyx-card border border-onyx-border rounded-2xl p-5 hover:border-onyx-whatsapp/40 hover:-translate-y-1 transition-all duration-300 group"
-            >
-              <div className="w-12 h-12 rounded-full bg-onyx-whatsapp/10 flex items-center justify-center group-hover:bg-onyx-whatsapp/20 transition-colors">
-                <FaWhatsapp className="text-onyx-whatsapp text-xl" />
-              </div>
-              <div>
-                <h3 className="text-sm text-onyx-text-muted mb-1">WhatsApp Enlace</h3>
-                <p className="text-onyx-whatsapp font-bold text-lg">221 XXX XXXX</p>
               </div>
             </a>
 
