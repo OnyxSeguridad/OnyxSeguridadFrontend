@@ -54,6 +54,7 @@ const clientesConLogo = [
   { name: "Cinuk", src: "/images/clients/cinuk.png.webp", darkBg: false },
   { name: "Indasa", src: "/images/clients/indasa.jpg", darkBg: false },
   { name: "Tresguerras", src: "/images/clients/tresguerras.webp", darkBg: false },
+  { name: "Bimbo", src: "/images/clients/Logo_Grupo_BIMBO.svg.png", darkBg: false },
 ];
 
 
@@ -131,7 +132,7 @@ export default function TecnologiaSection() {
         </motion.div>
 
         {/* Client logos */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
           {clientesConLogo.map((cliente, i) => (
             <motion.div
               key={cliente.name}
