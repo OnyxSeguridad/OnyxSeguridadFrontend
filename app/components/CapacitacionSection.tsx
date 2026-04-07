@@ -50,7 +50,6 @@ export default function CapacitacionSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          badge="Excelencia"
           title="Capacitación y Turnos"
           subtitle="Contamos con un equipo de trabajo calificado y productivo, con capacitación continua adaptada a las necesidades de cada cliente."
         />
@@ -60,15 +59,13 @@ export default function CapacitacionSection() {
           {capacidades.map((cap, i) => (
             <motion.div
               key={cap.title}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="flex gap-4 bg-onyx-card border border-onyx-border rounded-2xl p-6 hover:border-onyx-gold/30 transition-colors"
             >
-              <div className="w-12 h-12 rounded-xl bg-onyx-gold/10 flex items-center justify-center flex-shrink-0">
-                <cap.icon className="text-onyx-gold text-xl" />
-              </div>
+              <cap.icon className="text-onyx-gold text-2xl flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-onyx-text mb-1">
                   {cap.title}
@@ -83,8 +80,8 @@ export default function CapacitacionSection() {
 
         {/* Turnos */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >

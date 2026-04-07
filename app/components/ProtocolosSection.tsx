@@ -56,7 +56,6 @@ export default function ProtocolosSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          badge="Operaciones"
           title="Manual Operativo y Protocolos"
           subtitle="Redactamos un manual operativo y protocolos de actuación tras un estudio exhaustivo de cada servicio, coordinando todas las medidas de seguridad."
         />
@@ -66,15 +65,13 @@ export default function ProtocolosSection() {
           {protocolosPilares.map((pilar, i) => (
             <motion.div
               key={pilar.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: i === 0 ? -30 : i === 2 ? 30 : 0, y: i === 1 ? 20 : 0 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="bg-onyx-card border border-onyx-border rounded-2xl p-6 text-center hover:border-onyx-gold/30 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-full bg-onyx-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-onyx-gold/20 transition-colors">
-                <pilar.icon className="text-onyx-gold text-2xl" />
-              </div>
+              <pilar.icon className="text-onyx-gold text-3xl mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-onyx-text mb-2">
                 {pilar.title}
               </h3>
@@ -136,9 +133,7 @@ export default function ProtocolosSection() {
             <div className="space-y-4">
               {serviciosVigilancia.map((svc, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-onyx-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-onyx-gold" />
-                  </div>
+                  <span className="text-onyx-gold/60 font-bold text-xs mt-0.5 flex-shrink-0 w-5 text-right">{String(i + 1).padStart(2, '0')}</span>
                   <span className="text-sm text-onyx-text-muted leading-relaxed">
                     {svc}
                   </span>

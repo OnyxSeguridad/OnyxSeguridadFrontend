@@ -39,7 +39,6 @@ export default function VigilanteSection() {
     <section id="vigilante" className="py-20 md:py-28 bg-onyx-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          badge="Factor Humano"
           title="Vigilante de Seguridad"
           subtitle="El componente más importante de nuestros servicios. ONYX presta la mayor atención al factor humano, proporcionando a sus vigilantes los medios necesarios para afrontar su labor con la máxima seguridad."
         />
@@ -110,13 +109,13 @@ export default function VigilanteSection() {
               {equipamiento.map((eq, i) => (
                 <motion.div
                   key={eq.label}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: i % 2 === 0 ? -10 : 10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                  className="flex flex-col items-center gap-2 bg-onyx-card border border-onyx-border rounded-xl p-3 hover:border-onyx-gold/30 transition-colors text-center"
+                  transition={{ delay: i * 0.04 }}
+                  className="flex items-center gap-2 bg-onyx-card border border-onyx-border rounded-xl px-3 py-2.5 hover:border-onyx-gold/30 transition-colors"
                 >
-                  <eq.icon className="text-onyx-gold text-lg" />
+                  <eq.icon className="text-onyx-gold text-sm flex-shrink-0" />
                   <span className="text-xs text-onyx-text-muted leading-tight">
                     {eq.label}
                   </span>

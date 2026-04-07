@@ -34,17 +34,13 @@ export default function ContactoSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-onyx-gold border border-onyx-gold/30 rounded-full mb-4">
-            Contáctenos
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-onyx-text">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-onyx-text font-serif tracking-wide">
             ¿Necesita Seguridad Profesional?
           </h2>
           <p className="mt-4 text-base md:text-lg text-onyx-text-muted max-w-2xl mx-auto">
             Envíenos un mensaje directamente por WhatsApp y reciba atención
             personalizada de manera inmediata.
           </p>
-          <div className="mt-6 mx-auto h-1 w-16 bg-gradient-to-r from-onyx-gold to-onyx-gold-light rounded-full" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">

@@ -29,23 +29,11 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 w-full">
         <div className="max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-onyx-gold/30 bg-onyx-gold/10 mb-6"
-          >
-            <FaShieldAlt className="text-onyx-gold text-sm" />
-            <span className="text-onyx-gold text-sm font-medium tracking-wide">
-              Registro SSP/SUBCOP/DGSP/033-25/530
-            </span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6 font-serif"
           >
             <span className="text-onyx-text">Seguridad</span>
             <br />
@@ -119,12 +107,12 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Registration + Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        className="absolute bottom-6 left-0 right-0 z-10 flex flex-col items-center gap-4"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -133,6 +121,9 @@ export default function HeroSection() {
         >
           <div className="w-1.5 h-3 bg-onyx-gold rounded-full" />
         </motion.div>
+        <span className="text-onyx-text-muted/40 text-[10px] tracking-[0.15em] uppercase">
+          SSP/SUBCOP/DGSP/033-25/530
+        </span>
       </motion.div>
     </section>
   );

@@ -126,13 +126,9 @@ export default function TecnologiaSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-onyx-gold border border-onyx-gold/30 rounded-full mb-4">
-            Experiencia
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-onyx-text mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-onyx-text mb-4 font-serif tracking-wide">
             Clientes que Confían en ONYX
           </h2>
-          <div className="mt-4 mx-auto h-1 w-16 bg-gradient-to-r from-onyx-gold to-onyx-gold-light rounded-full" />
         </motion.div>
 
         {/* Client logos */}

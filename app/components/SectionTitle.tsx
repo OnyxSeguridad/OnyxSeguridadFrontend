@@ -28,16 +28,13 @@ export default function SectionTitle({
           {badge}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-onyx-text leading-tight">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-onyx-text leading-tight font-serif tracking-wide">
         {title}
       </h2>
       {subtitle && (
         <p className="mt-4 text-base md:text-lg text-onyx-text-muted max-w-2xl mx-auto leading-relaxed">
           {subtitle}
         </p>
-      )}
-      {center && (
-        <div className="mt-6 mx-auto h-1 w-16 bg-gradient-to-r from-onyx-gold to-onyx-gold-light rounded-full" />
       )}
     </motion.div>
   );

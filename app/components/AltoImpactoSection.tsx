@@ -32,7 +32,7 @@ export default function AltoImpactoSection() {
     <section id="alto-impacto" className="py-20 md:py-28 bg-onyx-dark relative overflow-hidden">
       {/* Red/Gold subtle glow for urgency/importance */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl aspect-square bg-red-900/5 rounded-full blur-[120px] pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle
           badge="Gestión de Crisis"
@@ -44,15 +44,13 @@ export default function AltoImpactoSection() {
           {altoImpacto.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
               className="bg-onyx-card border border-red-900/20 hover:border-red-500/40 rounded-2xl p-6 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-red-950/30 flex items-center justify-center mb-6 border border-red-900/30 group-hover:bg-red-900/30 transition-colors">
-                <item.icon className="text-red-500/90 text-2xl group-hover:text-red-400 transition-colors" />
-              </div>
+              <item.icon className="text-red-500/90 text-3xl mb-6 group-hover:text-red-400 transition-colors" />
               <h3 className="text-xl font-bold text-onyx-text mb-3">
                 {item.title}
               </h3>

@@ -26,7 +26,6 @@ export default function ReclutamientoSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          badge="Calidad Excepcional"
           title="Reclutamiento y Selección"
           subtitle="Nuestra área de selección está conformada por profesionales especializados en sistemas de gestión de calidad, con los procesos más exhaustivos."
         />
@@ -41,9 +40,7 @@ export default function ReclutamientoSection() {
             className="space-y-6"
           >
             <div className="glass rounded-2xl p-6 flex items-start gap-4">
-              <div className="w-14 h-14 rounded-xl bg-onyx-gold/15 flex items-center justify-center flex-shrink-0">
-                <FaIdBadge className="text-onyx-gold text-2xl" />
-              </div>
+              <FaIdBadge className="text-onyx-gold text-3xl flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-lg font-semibold text-onyx-gold mb-1">
                   C.U.I.P.
@@ -57,9 +54,7 @@ export default function ReclutamientoSection() {
             </div>
 
             <div className="glass rounded-2xl p-6 flex items-start gap-4">
-              <div className="w-14 h-14 rounded-xl bg-onyx-gold/15 flex items-center justify-center flex-shrink-0">
-                <FaUserCheck className="text-onyx-gold text-2xl" />
-              </div>
+              <FaUserCheck className="text-onyx-gold text-3xl flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-lg font-semibold text-onyx-gold mb-1">
                   Registro SSP
@@ -94,11 +89,10 @@ export default function ReclutamientoSection() {
                     transition={{ delay: i * 0.08 }}
                     className="flex items-center gap-3 group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-onyx-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-onyx-gold/20 transition-colors">
-                      <span className="text-onyx-gold font-bold text-sm">
-                        {i + 1}
-                      </span>
-                    </div>
+                    <span className="text-onyx-gold font-bold text-sm w-6 text-right flex-shrink-0">
+                      {i + 1}
+                    </span>
+                    <div className="h-px flex-grow max-w-4 bg-onyx-border" />
                     <span className="text-onyx-text-muted text-sm group-hover:text-onyx-text transition-colors">
                       {req}
                     </span>

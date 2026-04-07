@@ -12,6 +12,7 @@
   --color-onyx-text-muted: #999999;
   --color-onyx-whatsapp: #25d366;
   --font-sans: var(--font-outfit);
+  --font-serif: var(--font-cinzel);
 }
 
 /* Smooth scroll */
