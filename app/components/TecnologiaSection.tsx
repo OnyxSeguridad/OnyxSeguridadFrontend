@@ -47,14 +47,16 @@ const tecnologias = [
 
 const clientesConLogo = [
   { name: "FEMSA", src: "/images/clients/FEMSA_Logo.svg", darkBg: false },
+  { name: "Bimbo", src: "/images/clients/Logo_Grupo_BIMBO.svg.png", darkBg: false },
+  { name: "Citi", src: "/images/clients/Citi_logo_March_2023.svg.png", darkBg: false },
+  { name: "Tresguerras", src: "/images/clients/tresguerras.webp", darkBg: false },
+  { name: "Lomas de Angelópolis", src: "/images/clients/lomasdeangelopolis.png", darkBg: false },
   { name: "Fratta", src: "/images/clients/Fratta.png", darkBg: false },
   { name: "Loxitec", src: "/images/clients/loxitec.gif", darkBg: false },
   { name: "Brecasa", src: "/images/clients/brecasa.png", darkBg: true },
-  { name: "Lomas de Angelópolis", src: "/images/clients/lomasdeangelopolis.png", darkBg: false },
   { name: "Cinuk", src: "/images/clients/cinuk.png.webp", darkBg: false },
   { name: "Indasa", src: "/images/clients/indasa.jpg", darkBg: false },
-  { name: "Tresguerras", src: "/images/clients/tresguerras.webp", darkBg: false },
-  { name: "Bimbo", src: "/images/clients/Logo_Grupo_BIMBO.svg.png", darkBg: false },
+  { name: "La Berenjena", src: "/images/clients/La Berenjena.webp", darkBg: true },
 ];
 
 
@@ -132,7 +134,7 @@ export default function TecnologiaSection() {
         </motion.div>
 
         {/* Client logos */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
           {clientesConLogo.map((cliente, i) => (
             <motion.div
               key={cliente.name}
