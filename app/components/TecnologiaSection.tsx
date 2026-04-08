@@ -48,7 +48,7 @@ const tecnologias = [
 const clientesConLogo = [
   { name: "FEMSA", src: "/images/clients/FEMSA_Logo.svg", darkBg: false },
   { name: "Bimbo", src: "/images/clients/Logo_Grupo_BIMBO.svg.png", darkBg: false },
-  { name: "Citi", src: "/images/clients/Citi_logo_March_2023.svg.png", darkBg: false },
+  { name: "Citi", src: "/images/clients/citi.png", darkBg: false },
   { name: "Tresguerras", src: "/images/clients/tresguerras.webp", darkBg: false },
   { name: "Lomas de Angelópolis", src: "/images/clients/lomasdeangelopolis.png", darkBg: false },
   { name: "Fratta", src: "/images/clients/Fratta.png", darkBg: false },
@@ -56,7 +56,7 @@ const clientesConLogo = [
   { name: "Brecasa", src: "/images/clients/brecasa.png", darkBg: true },
   { name: "Cinuk", src: "/images/clients/cinuk.png.webp", darkBg: false },
   { name: "Indasa", src: "/images/clients/indasa.jpg", darkBg: false },
-  { name: "La Berenjena", src: "/images/clients/La Berenjena.webp", darkBg: true },
+  { name: "La Berenjena", src: "/images/clients/la-berenjena.webp", darkBg: true },
 ];
 
 
