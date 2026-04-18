@@ -57,6 +57,7 @@ const clientesConLogo = [
   { name: "Cinuk", src: "/images/clients/cinuk.png.webp", darkBg: false },
   { name: "Indasa", src: "/images/clients/indasa.jpg", darkBg: false },
   { name: "La Berenjena", src: "/images/clients/la-berenjena.webp", darkBg: true },
+  { name: "Comercializadora Phimsa", src: "/images/clients/Phimsa.png", darkBg: false },
 ];
 
 
@@ -153,18 +154,6 @@ export default function TecnologiaSection() {
               />
             </motion.div>
           ))}
-          {/* Phimsa — solo texto */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: clientesConLogo.length * 0.06 }}
-            className="bg-onyx-card rounded-2xl p-5 flex items-center justify-center h-24 border border-onyx-border hover:border-onyx-gold/40 transition-all duration-300 hover:-translate-y-1"
-          >
-            <span className="text-onyx-text-muted font-semibold text-sm text-center leading-tight hover:text-onyx-gold transition-colors">
-              Comercializadora<br />Phimsa
-            </span>
-          </motion.div>
         </div>
 
       </div>
