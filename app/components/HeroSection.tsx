@@ -8,6 +8,7 @@ export default function HeroSection() {
   return (
     <section
       id="inicio"
+      aria-label="Sección principal - ONYX Seguridad Privada y Estratégica"
       className="relative min-h-screen flex items-center overflow-hidden bg-onyx-black"
     >
       {/* Background image */}
@@ -64,16 +65,18 @@ export default function HeroSection() {
               href="https://wa.me/522211476154?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20seguridad."
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Solicitar información por WhatsApp - ONYX Seguridad"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-onyx-whatsapp text-white font-semibold text-lg rounded-full hover:bg-green-500 transition-all duration-200 shadow-lg shadow-green-900/30 hover:shadow-green-900/50 hover:scale-105"
             >
-              <FaWhatsapp className="text-2xl" />
+              <FaWhatsapp className="text-2xl" aria-hidden="true" />
               Solicitar Información
             </a>
             <a
               href="tel:+522225033916"
+              aria-label="Llamar a ONYX Seguridad al 222 503 3916"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-onyx-gold/40 text-onyx-gold font-semibold text-lg rounded-full hover:bg-onyx-gold/10 transition-all duration-200"
             >
-              <FaPhone className="text-lg" />
+              <FaPhone className="text-lg" aria-hidden="true" />
               222 503 3916
             </a>
           </motion.div>

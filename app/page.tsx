@@ -10,12 +10,17 @@ import TecnologiaSection from "./components/TecnologiaSection";
 import ContactoSection from "./components/ContactoSection";
 import AltoImpactoSection from "./components/AltoImpactoSection";
 
-
 export default function Home() {
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-onyx-gold focus:text-onyx-black focus:rounded-md focus:font-semibold"
+      >
+        Saltar al contenido principal
+      </a>
       <Navbar />
-      <main>
+      <main id="main-content" role="main">
         <HeroSection />
         <div className="section-divider" />
         <ServiciosSection />
