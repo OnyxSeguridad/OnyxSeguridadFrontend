@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-R83HZN1YFE";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -313,6 +316,7 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
       </head>
       <body className="min-h-full flex flex-col">
         <script
@@ -322,6 +326,18 @@ export default function RootLayout({
           }}
         />
         {children}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
